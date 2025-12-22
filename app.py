@@ -39,7 +39,7 @@ def preprocess_input():
         "Education": 1 if education=="Graduate" else 0,
         "Self_Employed": 1 if self_employed=="Yes" else 0,
         "ApplicantIncome": applicant_income,
-        "CoapplicantIncome": coapplicant_income,
+        
         "LoanAmount": loan_amount,
         "Loan_Amount_Term": loan_amount_term,
         "Credit_History": credit_history,
@@ -75,3 +75,4 @@ if st.button("Predict Loan Eligibility"):
     ax.set_ylim([0,1])
     ax.set_ylabel("Probability")
     st.pyplot(fig)
+
