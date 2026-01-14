@@ -63,7 +63,6 @@ if st.button("Predict Loan Eligibility"):
     else:
         st.error(f"❌ Loan Not Approved (Probability: {probability[0]*100:.2f}%)")
 
-    # Plot probability as bar chart
     st.subheader("Prediction Probability")
     prob_df = pd.DataFrame({
         "Status": ["Not Approved", "Approved"],
@@ -75,4 +74,5 @@ if st.button("Predict Loan Eligibility"):
     ax.set_ylim([0,1])
     ax.set_ylabel("Probability")
     st.pyplot(fig)
+
 
